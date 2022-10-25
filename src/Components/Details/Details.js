@@ -59,7 +59,7 @@ export const Details = () => {
                     </Link>
                 </div>
                 <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-500">
-                    <Link to='/instructor'>
+                    <Link to='/instructors'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <FaChalkboardTeacher ></FaChalkboardTeacher>
                         </div>
