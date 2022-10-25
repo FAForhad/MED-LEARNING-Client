@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { FaHospitalAlt, FaChalkboardTeacher, FaDiscourse } from "react-icons/fa";
-import { GiMedicines, GiMiracleMedecine } from "react-icons/gi";
+import { FaChalkboardTeacher, FaDiscourse } from "react-icons/fa";
+import { GiMedicines, } from "react-icons/gi";
 import { GrBlog } from "react-icons/gr";
 
 export const Details = () => {

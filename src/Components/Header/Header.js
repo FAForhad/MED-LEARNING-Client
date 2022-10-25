@@ -23,9 +23,6 @@ export const Header = () => {
                                 MedLearning is a division of Ultimate  <br className="hidden md:block" />
                                 Medical Academy
                             </h2>
-                            {/* <p className="max-w-xl mb-4 text-base  md:text-lg">
-                                this is a full-service accredited medical education company. Med Learning Group focuses on developing and implementing continuing education that improves healthcare practitioner's ability to provide optimal care to their patients
-                            </p> */}
 
                         </div>
                         <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
