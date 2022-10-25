@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from '../Components/Home/Home';
+import Instructors from '../Components/Instructors/Instructors';
 import { SignIn } from '../Components/SignIn/SignIn';
 import Courses from '../Components/Trajectory/Courses';
 import Error from '../Others/Error/Error';
@@ -21,9 +22,13 @@ const Routes = () => {
                     element: <SignIn></SignIn>
                 },
                 {
-                    path: '/trajectory',
+                    path: '/courses',
                     element: <Courses></Courses>,
-                    loader: () => { }
+                },
+                {
+                    path: '/instructors',
+                    element: <Instructors></Instructors>,
+                    loader: () => fetch('http://localhost:5000/instructors')
                 }
 
             ]

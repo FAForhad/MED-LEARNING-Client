@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div classNameName='sticky top-0'>
-            <div className="px-4 py-4 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 bg-gray-800">
+        <div className='sticky top-0'>
+            <div className="px-4 py-4 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 ">
                 <div className="relative flex idtems-center justify-between lg:justify-center lg:space-x-16">
                     <ul className="flex items-center hidden space-x-8 lg:flex">
                         <li>
                             <Link
-                                to="/trajectory"
+                                to="/courses"
                                 aria-label="Courses"
                                 title="Courses"
-                                className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Trajectory
                             </Link>
@@ -24,7 +24,7 @@ const Navbar = () => {
                                 to="/instructors"
                                 aria-label="Instructor"
                                 title="Instructor"
-                                className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Instructors
                             </Link>
@@ -34,7 +34,7 @@ const Navbar = () => {
                                 to="/medicines"
                                 aria-label="medicines"
                                 title="medicines"
-                                className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Medicines
                             </Link>
@@ -46,8 +46,8 @@ const Navbar = () => {
                         title="Company"
                         className="inline-flex items-center"
                     >
-                        <GiMiracleMedecine size='40px' color='white'></GiMiracleMedecine>
-                        <span className="ml-2 text-xl font-bold tracking-wide text-blue-200 uppercase">
+                        <GiMiracleMedecine size='40px' className='text-teal-500'></GiMiracleMedecine>
+                        <span className="ml-2 text-xl font-bold tracking-wide text-blue-500 uppercase">
                             MED LEARNING
                         </span>
                     </Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
                                 to="/blogs"
                                 aria-label="Blogs"
                                 title="Blogs"
-                                className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Blogs
                             </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                                 to="/signIn"
                                 aria-label="Sign in"
                                 title="Sign in"
-                                className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Sign in
                             </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
                                 to="/signUp"
                                 aria-label="Sign up"
                                 title="Sign up"
-                                className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
                                 Sign up
                             </Link>
@@ -159,7 +159,7 @@ const Navbar = () => {
                                                     to="/trajectory"
                                                     aria-label="Our product"
                                                     title="Our product"
-                                                    className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Trajectory
                                                 </Link>
@@ -169,7 +169,7 @@ const Navbar = () => {
                                                     to="/instructors"
                                                     aria-label="Our product"
                                                     title="Our product"
-                                                    className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Instructors
                                                 </Link>
@@ -179,7 +179,7 @@ const Navbar = () => {
                                                     to="/medicines"
                                                     aria-label="Product pricing"
                                                     title="Product pricing"
-                                                    className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Medicines
                                                 </Link>
@@ -189,7 +189,7 @@ const Navbar = () => {
                                                     to="blogs"
                                                     aria-label="About us"
                                                     title="About us"
-                                                    className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Blogs
                                                 </Link>
@@ -199,7 +199,7 @@ const Navbar = () => {
                                                     to="/signIn"
                                                     aria-label="Sign in"
                                                     title="Sign in"
-                                                    className="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                    className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Sign in
                                                 </Link>
