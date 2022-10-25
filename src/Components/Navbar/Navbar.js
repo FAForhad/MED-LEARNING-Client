@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { GiMiracleMedecine } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -45,7 +46,7 @@ const Navbar = () => {
                         title="Company"
                         class="inline-flex items-center"
                     >
-
+                        <GiMiracleMedecine size='40px' color='white'></GiMiracleMedecine>
                         <span class="ml-2 text-xl font-bold tracking-wide text-blue-200 uppercase">
                             MED LEARNING
                         </span>
@@ -53,12 +54,12 @@ const Navbar = () => {
                     <ul class="flex items-center hidden space-x-8 lg:flex">
                         <li>
                             <Link
-                                to="/aboutUs"
-                                aria-label="About us"
-                                title="About us"
+                                to="/blogs"
+                                aria-label="Blogs"
+                                title="Blogs"
                                 class="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
                             >
-                                About us
+                                Blogs
                             </Link>
                         </li>
                         <li>
@@ -185,12 +186,12 @@ const Navbar = () => {
                                             </li>
                                             <li>
                                                 <Link
-                                                    to="aboutUs"
+                                                    to="blogs"
                                                     aria-label="About us"
                                                     title="About us"
                                                     class="font-medium tracking-wide text-slate-200 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    About us
+                                                    Blogs
                                                 </Link>
                                             </li>
                                             <li>

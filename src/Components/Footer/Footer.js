@@ -1,3 +1,5 @@
+import { GiMiracleMedecine } from "react-icons/gi";
+
 export const Footer = () => {
     return (
         <div className="relative mt-16 bg-slate-800">
@@ -20,21 +22,7 @@ export const Footer = () => {
                             title="Company"
                             className="inline-flex items-center"
                         >
-                            <svg
-                                className="w-8 text-white"
-                                viewBox="0 0 24 24"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeMiterlimit="10"
-                                stroke="currentColor"
-                                fill="none"
-                            >
-                                <rect x="3" y="1" width="7" height="12" />
-                                <rect x="3" y="17" width="7" height="6" />
-                                <rect x="14" y="1" width="7" height="6" />
-                                <rect x="14" y="11" width="7" height="12" />
-                            </svg>
+                            <GiMiracleMedecine size='40px' color='white'></GiMiracleMedecine>
                             <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                                 MED LEARNING
                             </span>
@@ -227,7 +215,7 @@ export const Footer = () => {
                 </div>
                 <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
                     <p className="text-sm text-gray-100">
-                        © Copyright 2020 Lorem Inc. All rights reserved.
+                        © Copyright 2020 MED LEARNING. All rights reserved.
                     </p>
                     <div className="flex items-center mt-4 space-x-4 sm:mt-0">
                         <a
