@@ -9,7 +9,7 @@ const Courses = () => {
         <div className="sm:grid md:grid grid-cols-5 gap-4">
             <div className="py-5 sticky ">
                 {
-                    courses.map(course => <Link to={`/courses/${course.id}`} >
+                    courses.map(course => <Link to={`/courses/${course.id}`} key={course.id}>
                         <div className=" mx-5 my-10 transition duration-200 transform rounded shadow-md  hover:shadow-2xl">
                             <p className="text-sm font-medium py-5">
                                 {course.name}
