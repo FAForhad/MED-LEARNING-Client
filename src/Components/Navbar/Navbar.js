@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <div className='sticky top-0'>
+        <div className='sticky top-0 z-50'>
             <div className="px-4 py-4 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 ">
                 <div className="relative flex idtems-center justify-between lg:justify-center lg:space-x-16">
                     <ul className="flex items-center hidden space-x-8 lg:flex">
