@@ -12,6 +12,7 @@ const auth = getAuth(app);
 const UserContexts = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
+    const [buy, setBuy] = useState(false)
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -58,7 +59,7 @@ const UserContexts = ({ children }) => {
 
 
 
-    const info = { user, register, updateUser, login, googleLogin, githubLogin, logOut, loading }
+    const info = { user, register, updateUser, login, googleLogin, githubLogin, logOut, loading, buy, setBuy }
     return (
         <AuthContext.Provider value={info}>
             {children}

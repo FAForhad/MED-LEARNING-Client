@@ -53,7 +53,7 @@ const Routes = () => {
                 {
                     path: '/instructors/:id',
                     loader: ({ params }) => fetch(`https://assignment-10-server-wheat-one.vercel.app/instructors/${params.id}`),
-                    element: <PrivateRoute><DoctorDetails></DoctorDetails></PrivateRoute>
+                    element: <DoctorDetails></DoctorDetails>
                 },
                 {
                     path: '/medicines',
