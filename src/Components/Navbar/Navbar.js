@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import toast from 'react-hot-toast';
 import { GiMiracleMedecine } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContexts';
@@ -10,7 +11,7 @@ const Navbar = () => {
 
     const handleSignOut = () => {
         logOut()
-            .then(() => { })
+            .then(() => toast.success('Log Out Successfully'))
             .catch((error) => console.log(error));
     }
     return (

@@ -11,6 +11,7 @@ import CourseDetails from '../Components/Trajectory/CourseDetails';
 import Courses from '../Components/Trajectory/Courses';
 import Error from '../Others/Error/Error';
 import Main from '../Others/Main/Main';
+import PrivateRoute from './PrivateRoute';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -42,7 +43,7 @@ const Routes = () => {
                 {
                     path: '/courses/:id',
                     loader: ({ params }) => fetch(`https://assignment-10-server-wheat-one.vercel.app/courses/${params.id}`),
-                    element: <CourseDetails></CourseDetails>,
+                    element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>
                 },
                 {
                     path: '/instructors',
@@ -52,11 +53,11 @@ const Routes = () => {
                 {
                     path: '/instructors/:id',
                     loader: ({ params }) => fetch(`https://assignment-10-server-wheat-one.vercel.app/instructors/${params.id}`),
-                    element: <DoctorDetails></DoctorDetails>
+                    element: <PrivateRoute><DoctorDetails></DoctorDetails></PrivateRoute>
                 },
                 {
                     path: '/medicines',
-                    element: <Medicines></Medicines>,
+                    element: <PrivateRoute><Medicines></Medicines></PrivateRoute>,
                     loader: () => fetch('https://assignment-10-server-wheat-one.vercel.app/medicines')
                 }
 

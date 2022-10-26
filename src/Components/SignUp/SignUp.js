@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContexts';
 
@@ -17,6 +18,7 @@ const SignUp = () => {
                 const user = result.user
                 form.reset()
                 handleupdateUser(name, picture)
+                toast.success('Sign Up Successful')
                 console.log(user)
             })
             .catch(error => console.error(error))

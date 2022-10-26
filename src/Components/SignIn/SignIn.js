@@ -1,23 +1,30 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import toast from "react-hot-toast";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/UserContexts";
 
 export const SignIn = () => {
+    const [error, setError] = useState('')
     const { login, googleLogin, githubLogin } = useContext(AuthContext);
-
-
+    const navigate = useNavigate()
+    const location = useLocation()
     const handleLogin = (event) => {
         event.preventDefault()
         const form = event.target
         const email = form.email.value
         const password = form.password.value
+        const from = location?.state?.from?.pathname || '/'
         login(email, password)
             .then(result => {
                 const user = result.user
                 form.reset()
+                navigate(from, { replace: true })
+                toast.success('Login Successful')
                 console.log(user)
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                setError(error.message)
+            })
     }
 
 
@@ -26,8 +33,11 @@ export const SignIn = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                toast.success('Login Successful')
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                setError(error.message)
+            })
     }
 
 
@@ -36,8 +46,9 @@ export const SignIn = () => {
             .then(result => {
                 const user = result.user
                 console.log(user)
+                toast.success('Login Successful')
             })
-            .catch(error => console.error(error))
+            .catch(error => setError(error.message))
     }
 
 
@@ -61,7 +72,7 @@ export const SignIn = () => {
                             <form onSubmit={handleLogin} className="space-y-6 ng-untouched ng-pristine ng-valid">
                                 <div className="space-y-1 text-sm">
                                     <label type="username" className="block dark:text-gray-400">Email</label>
-                                    <input type="email" name="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-100 focus:dark:border-violet-400" required />
+                                    <input type="email" name="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-violet-400" required />
                                 </div>
                                 <div className="space-y-1 text-sm">
                                     <label type="password" className="block dark:text-gray-400">Password</label>
@@ -70,6 +81,7 @@ export const SignIn = () => {
                                         <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                                     </div>
                                 </div>
+                                <p className="text-red-500">{error}</p>
                                 <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400 hover:bg-violet-800 hover:text-gray-200">Sign in</button>
                             </form>
                             <div className="flex items-center pt-4 space-x-1">
