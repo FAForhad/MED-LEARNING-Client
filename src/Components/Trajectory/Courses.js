@@ -10,7 +10,7 @@ const Courses = () => {
             <div className="py-5 sticky ">
                 {
                     courses.map(course => <Link to={`/courses/${course.id}`} key={course.id}>
-                        <div className=" mx-5 my-10 transition duration-200 transform rounded shadow-md  hover:shadow-2xl">
+                        <div className=" mx-5 my-10 transition duration-200 transform rounded shadow-md  hover:shadow-2xl hover:shadow-cyan-300/50">
                             <p className="text-sm font-medium py-5">
                                 {course.name}
                             </p>

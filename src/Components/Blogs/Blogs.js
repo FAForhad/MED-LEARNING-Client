@@ -1,4 +1,5 @@
 import React from 'react';
+import { FAQ } from './FAQ';
 
 const Blogs = () => {
     return (
@@ -54,6 +55,7 @@ const Blogs = () => {
                     </div>
                 </div>
             </section>
+            <FAQ></FAQ>
         </div >
     );
 };

@@ -4,6 +4,7 @@ import Blogs from '../Components/Blogs/Blogs';
 import DoctorDetails from '../Components/DoctorDetails/DoctorDetails';
 import Home from '../Components/Home/Home';
 import Instructors from '../Components/Instructors/Instructors';
+import Medicines from '../Components/Medicines/Medicines';
 import { SignIn } from '../Components/SignIn/SignIn';
 import SignUp from '../Components/SignUp/SignUp';
 import CourseDetails from '../Components/Trajectory/CourseDetails';
@@ -35,24 +36,29 @@ const Routes = () => {
                 },
                 {
                     path: '/courses',
-                    loader: () => fetch('http://localhost:5000/courses'),
+                    loader: () => fetch('https://assignment-10-server-wheat-one.vercel.app/courses'),
                     element: <Courses></Courses>,
                 },
                 {
                     path: '/courses/:id',
-                    loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
+                    loader: ({ params }) => fetch(`https://assignment-10-server-wheat-one.vercel.app/courses/${params.id}`),
                     element: <CourseDetails></CourseDetails>,
                 },
                 {
                     path: '/instructors',
-                    loader: () => fetch('http://localhost:5000/instructors'),
+                    loader: () => fetch('https://assignment-10-server-wheat-one.vercel.app/instructors'),
                     element: <Instructors></Instructors>
                 },
                 {
                     path: '/instructors/:id',
-                    loader: ({ params }) => fetch(`http://localhost:5000/instructors/${params.id}`),
+                    loader: ({ params }) => fetch(`https://assignment-10-server-wheat-one.vercel.app/instructors/${params.id}`),
                     element: <DoctorDetails></DoctorDetails>
                 },
+                {
+                    path: '/medicines',
+                    element: <Medicines></Medicines>,
+                    loader: () => fetch('https://assignment-10-server-wheat-one.vercel.app/medicines')
+                }
 
 
             ]
