@@ -4,6 +4,7 @@ import DoctorDetails from '../Components/DoctorDetails/DoctorDetails';
 import Home from '../Components/Home/Home';
 import Instructors from '../Components/Instructors/Instructors';
 import { SignIn } from '../Components/SignIn/SignIn';
+import SignUp from '../Components/SignUp/SignUp';
 import CourseDetails from '../Components/Trajectory/CourseDetails';
 import Courses from '../Components/Trajectory/Courses';
 import Error from '../Others/Error/Error';
@@ -22,6 +23,10 @@ const Routes = () => {
                 {
                     path: '/signin',
                     element: <SignIn></SignIn>
+                },
+                {
+                    path: '/signUp',
+                    element: <SignUp></SignUp>
                 },
                 {
                     path: '/courses',

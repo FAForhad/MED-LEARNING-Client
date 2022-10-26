@@ -16,6 +16,10 @@ const UserContexts = ({ children }) => {
     const githubProvider = new GithubAuthProvider();
 
 
+    const register = () => {
+
+    }
+
     const login = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
