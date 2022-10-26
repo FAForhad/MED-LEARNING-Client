@@ -3,9 +3,34 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContexts';
 
 const SignUp = () => {
-    const { user } = useContext(AuthContext)
+    const { register, updateUser } = useContext(AuthContext)
 
+    const handleSignIn = (event) => {
+        event.preventDefault()
+        const form = event.target
+        const name = form.name.value
+        const picture = form.picture.value
+        const email = form.email.value
+        const password = form.password.value
+        register(email, password)
+            .then(result => {
+                const user = result.user
+                form.reset()
+                handleupdateUser(name, picture)
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
 
+    const handleupdateUser = (name, picture) => {
+        const profile = {
+            displayName: name,
+            photoURL: picture
+        }
+        updateUser(profile)
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
 
     return (
 
@@ -22,18 +47,18 @@ const SignUp = () => {
                         </div>
                         <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-800 dark:text-gray-100">
                             <h1 className="text-2xl font-bold text-center">Sign Up</h1>
-                            <form onSubmit={''} className="space-y-6 ng-untouched ng-pristine ng-valid">
-                                {/* <div className="space-y-1 text-sm">
+                            <form onSubmit={handleSignIn} className="space-y-6 ng-untouched ng-pristine ng-valid">
+                                <div className="space-y-1 text-sm">
                                     <label type="name" className="block dark:text-gray-400">Name</label>
-                                    <input type="name" name="name" placeholder="Your Name" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-100 focus:dark:border-violet-400" required />
+                                    <input type="name" name="name" placeholder="Your Name" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-violet-400" required />
                                 </div>
                                 <div className=" text-sm">
                                     <label type="picture" className="block dark:text-gray-400">Picture URL</label>
-                                    <input type="picture" name="picture" placeholder="Your Picture URL" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-100 focus:dark:border-violet-400" required />
-                                </div> */}
+                                    <input type="picture" name="picture" placeholder="Your Picture URL" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-violet-400" required />
+                                </div>
                                 <div className="space-y-1 text-sm">
                                     <label type="email" className="block dark:text-gray-400">Email</label>
-                                    <input type="email" name="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-100 focus:dark:border-violet-400" required />
+                                    <input type="email" name="email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-violet-400" required />
                                 </div>
                                 <div className="space-y-1 text-sm">
                                     <label type="password" className="block dark:text-gray-400">Password</label>

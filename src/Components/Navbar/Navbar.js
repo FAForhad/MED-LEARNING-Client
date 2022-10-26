@@ -82,6 +82,9 @@ const Navbar = () => {
                                 Sign up
                             </Link>
                         </li>
+                        <li>
+                            <img src="https://source.unsplash.com/75x75/?portrait" alt="" title='name' className="self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                        </li>
                     </ul>
                     <div className="lg:hidden">
                         <button
