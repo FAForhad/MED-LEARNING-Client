@@ -30,6 +30,13 @@ const Courses = () => {
                                 <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus id.</p>
                             </div>
                         </div>
+                        <div>
+                            <Link to='/pricing'>
+                                <button class="bg-cyan-400 rounded p-4 shadow-xl w-full text-lg font-semibold  shadow-cyan-400/50 ">
+                                    BUY ONCE, USE FOREVER.
+                                </button>
+                            </Link>
+                        </div>
                         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                             {
                                 courses.map(course => <Course key={course.id} course={course}></Course>)

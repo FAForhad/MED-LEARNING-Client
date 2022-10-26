@@ -4,9 +4,8 @@ const Medicine = ({ medicine }) => {
     const { name, picture, about, company } = medicine
     return (
         <div>
-            <a
+            <div
                 title={company}
-                href="/"
                 aria-label="View Item"
                 className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
             >
@@ -30,7 +29,7 @@ const Medicine = ({ medicine }) => {
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     );
 };

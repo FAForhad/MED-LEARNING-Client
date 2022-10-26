@@ -60,8 +60,6 @@ export const SignIn = () => {
                 className="absolute inset-0 object-cover lg:ml-24 w-50 h-full"
                 alt=""
             />
-
-
             <div className="relative  bg-opacity-25">
                 <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                     <div className="flex flex-col items-center justify-between xl:flex-row">

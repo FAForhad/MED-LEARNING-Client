@@ -1,8 +1,14 @@
-import React, { useContext } from 'react';
-import { AuthContext } from '../../Contexts/UserContexts';
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const Pricing = () => {
-    const { setBuy } = useContext(AuthContext)
+
+    const [buy, setBuy] = useState(false)
+    const toggle = () => {
+        setBuy(true)
+        toast.success('You have successfully granted our access')
+    }
+
     return (
         <div>
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -56,12 +62,23 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div>
-                            <button
-                                onClick={() => setBuy(true)}
-                                className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-700 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
-                            >
-                                Start for free
-                            </button>
+                            {
+                                buy ?
+                                    <button
+                                        disabled
+                                        className={`inline-flex items-center justify-center ${buy ? "cursor-not-allowed" : "shadow-md"} w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-700 rounded  hover:bg-gray-900 focus:shadow-outline focus:outline-none`}
+                                    >
+                                        Free
+                                    </button>
+                                    :
+
+                                    <button
+                                        onClick={toggle}
+                                        className={`inline-flex items-center justify-center ${buy ? "cursor-not-allowed" : "shadow-md"} w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-700 rounded  hover:bg-gray-900 focus:shadow-outline focus:outline-none`}
+                                    >
+                                        Free
+                                    </button>
+                            }
                             <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
                                 Sed ut unde omnis iste natus accusantium doloremque.
                             </p>
@@ -83,12 +100,23 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div>
-                            <button
-                                onClick={() => setBuy(true)}
-                                className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide  transition duration-200 rounded bg-purple-700 hover:bg-purplr-900 shadow-xl shadow-cyan-300/50 text-white hover:shadow-cyan-500/50 focus:shadow-outline focus:outline-none"
-                            >
-                                Buy Pro
-                            </button>
+
+                            {
+                                buy ?
+                                    <button
+                                        disabled
+                                        className={`inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide  transition duration-200 rounded bg-purple-700 hover:bg-purplr-900 ${buy ? "cursor-not-allowed" : "shadow-md"} shadow-cyan-300/50 text-white hover:shadow-cyan-500/50 focus:shadow-outline focus:outline-none`}
+                                    >
+                                        Buy Pro
+                                    </button>
+                                    :
+                                    <button
+                                        onClick={toggle}
+                                        className={`inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide  transition duration-200 rounded bg-purple-700 hover:bg-purplr-900 ${buy ? "cursor-not-allowed" : "shadow-md"} shadow-cyan-300/50 text-white hover:shadow-cyan-500/50 focus:shadow-outline focus:outline-none`}
+                                    >
+                                        Buy Pro
+                                    </button>
+                            }
                             <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
                                 Sed ut unde omnis iste natus accusantium doloremque.
                             </p>
@@ -108,12 +136,23 @@ const Pricing = () => {
                             </div>
                         </div>
                         <div>
-                            <button
-                                onClick={() => setBuy(true)}
-                                className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-700 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
-                            >
-                                Buy Business
-                            </button>
+                            {
+                                buy ?
+                                    <button
+                                        disabled
+                                        className={`inline-flex items-center justify-center ${buy ? "cursor-not-allowed" : "shadow-md"} w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-700 rounded  hover:bg-gray-900 focus:shadow-outline focus:outline-none`}
+                                    >
+                                        Buy Business
+                                    </button>
+                                    :
+
+                                    <button
+                                        onClick={toggle}
+                                        className={`inline-flex items-center justify-center ${buy ? "cursor-not-allowed" : "shadow-md"} w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-700 rounded  hover:bg-gray-900 focus:shadow-outline focus:outline-none`}
+                                    >
+                                        Buy Business
+                                    </button>
+                            }
                             <p className="max-w-xs mt-6 text-xs text-gray-600 sm:text-sm sm:text-center sm:max-w-sm sm:mx-auto">
                                 Sed ut unde omnis iste natus accusantium doloremque.
                             </p>

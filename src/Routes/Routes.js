@@ -11,6 +11,7 @@ import CourseDetails from '../Components/Trajectory/CourseDetails';
 import Courses from '../Components/Trajectory/Courses';
 import Error from '../Others/Error/Error';
 import Main from '../Others/Main/Main';
+import Pricing from '../Others/Pricing/Pricing';
 import PrivateRoute from './PrivateRoute';
 
 const Routes = () => {
@@ -59,6 +60,10 @@ const Routes = () => {
                     path: '/medicines',
                     element: <PrivateRoute><Medicines></Medicines></PrivateRoute>,
                     loader: () => fetch('https://assignment-10-server-wheat-one.vercel.app/medicines')
+                },
+                {
+                    path: '/pricing',
+                    element: <Pricing></Pricing>
                 }
 
 
