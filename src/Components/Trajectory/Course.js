@@ -5,7 +5,7 @@ const Course = ({ course }) => {
     const { picture, name, duration, id } = course
     return (
         <Link to={`/courses/${id}`} aria-label="View Item">
-            <div className="relative overflow-hidden transition duration-150 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+            <div className="relative overflow-hidden transition duration-150 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl ">
                 <img
                     className="object-cover w-full h-56 md:h-64 xl:h-80"
                     src={picture}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Blogs from '../Components/Blogs/Blogs';
 import DoctorDetails from '../Components/DoctorDetails/DoctorDetails';
 import Home from '../Components/Home/Home';
 import Instructors from '../Components/Instructors/Instructors';
@@ -19,6 +20,10 @@ const Routes = () => {
                 {
                     path: '/',
                     element: <Home></Home>
+                },
+                {
+                    path: '/blogs',
+                    element: <Blogs></Blogs>
                 },
                 {
                     path: '/signin',

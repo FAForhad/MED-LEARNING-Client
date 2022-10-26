@@ -46,7 +46,7 @@ export const Details = () => {
                 </p>
             </div>
             <div className="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-500">
+                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='/courses'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <FaDiscourse></FaDiscourse>
@@ -58,7 +58,7 @@ export const Details = () => {
                         </p>
                     </Link>
                 </div>
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-500">
+                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='/instructors'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <FaChalkboardTeacher ></FaChalkboardTeacher>
@@ -70,7 +70,7 @@ export const Details = () => {
                         </p>
                     </Link>
                 </div>
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-500">
+                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='medicines'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <GiMedicines></GiMedicines>
@@ -82,7 +82,7 @@ export const Details = () => {
                         </p>
                     </Link>
                 </div>
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-500">
+                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='/blogs'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <GrBlog></GrBlog>

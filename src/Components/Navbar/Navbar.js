@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { GiMiracleMedecine } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/UserContexts';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { user, logOut } = useContext(AuthContext)
+
+
+    const handleSignOut = () => {
+        logOut()
+            .then(() => { })
+            .catch((error) => console.log(error));
+    }
     return (
         <div className='sticky top-0 z-50'>
             <div className="px-4 py-4 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 ">
@@ -62,29 +71,49 @@ const Navbar = () => {
                                 Blogs
                             </Link>
                         </li>
-                        <li>
-                            <Link
-                                to="/signIn"
-                                aria-label="Sign in"
-                                title="Sign in"
-                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                            >
-                                Sign in
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/signUp"
-                                aria-label="Sign up"
-                                title="Sign up"
-                                className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                            >
-                                Sign up
-                            </Link>
-                        </li>
-                        <li>
-                            <img src="https://source.unsplash.com/75x75/?portrait" alt="" title='name' className="self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
-                        </li>
+                        {
+                            !user?.uid
+
+                                ?
+                                <>
+                                    <li>
+                                        <Link
+                                            to="/signIn"
+                                            aria-label="Sign in"
+                                            title="Sign in"
+                                            className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        >
+                                            Sign in
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/signUp"
+                                            aria-label="Sign up"
+                                            title="Sign up"
+                                            className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        >
+                                            Sign up
+                                        </Link>
+                                    </li>
+                                </>
+                                :
+                                <>
+                                    <li>
+                                        <button
+                                            onClick={handleSignOut}
+                                            aria-label="Sign Out"
+                                            title="Sign Out"
+                                            className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                        >
+                                            Sign Out
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <img src={user?.photoURL} alt="" title={user?.displayName} className="self-center flex-shrink-0 w-12 h-12 border rounded-full md:justify-self-start dark:bg-gray-500 dark:border-gray-700" />
+                                    </li>
+                                </>
+                        }
                     </ul>
                     <div className="lg:hidden">
                         <button
