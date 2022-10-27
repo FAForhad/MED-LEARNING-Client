@@ -5,7 +5,7 @@ import { GrBlog } from "react-icons/gr";
 
 export const Details = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-transparent">
+        <div className=" px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-transparent">
             <div data-aos="fade-up" data-aos-easing="ease-out-cubic"
                 data-aos-duration="1000" className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>

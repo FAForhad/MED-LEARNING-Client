@@ -77,7 +77,7 @@ export const FAQ = () => {
                             </span>{' '}
                             Frequently Asked Questions
                         </h2>
-                        <p class="text-base text-gray-700 md:text-lg">
+                        <p class="text-base text-gray-900 md:text-lg">
                         </p>
                     </div>
                 </div>

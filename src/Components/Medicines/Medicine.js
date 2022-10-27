@@ -9,7 +9,7 @@ const Medicine = ({ medicine }) => {
                 data-aos-duration="1000"
                 title={company}
                 aria-label="View Item"
-                className="inline-block overflow-hidden bg-white rounded shadow-sm hover:-translate-y-2"
+                className="inline-block overflow-hidden rounded shadow-sm hover:-translate-y-2"
             >
                 <div className="flex flex-col h-full border">
                     <img

@@ -6,7 +6,7 @@ import { AuthContext } from '../../Contexts/UserContexts';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(true)
     const { user, logOut } = useContext(AuthContext)
     console.log(toggle)
 
@@ -117,13 +117,13 @@ const Navbar = () => {
                                 </>
                         }
                         <label type="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
-                            <span className='text-black'>Light</span>
+                            <span className='text-black'>Dark</span>
                             <span className="relative">
                                 <input onClick={() => setToggle(!toggle)} id="Toggle1" type="checkbox" className="hidden peer" />
                                 <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-100 peer-checked:dark:bg-gray-900"></div>
                                 <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-blue-800"></div>
                             </span>
-                            <span className='text-black'>Dark</span>
+                            <span className='text-black'>Light</span>
                         </label>
                     </ul>
                     <div className="lg:hidden">
@@ -258,13 +258,13 @@ const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <label type="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
-                                                <span className='text-black'>Light</span>
+                                                <span className='text-black'>Dark</span>
                                                 <span className="relative">
                                                     <input onClick={() => setToggle(!toggle)} id="Toggle1" type="checkbox" className="hidden peer" />
                                                     <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-100 peer-checked:dark:bg-gray-900"></div>
                                                     <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-blue-800"></div>
                                                 </span>
-                                                <span className='text-black'>Dark</span>
+                                                <span className='text-black'>Light</span>
                                             </label>
                                         </ul>
                                     </nav>

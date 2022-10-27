@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Course from './Course';
+import './Courses.css'
 
 const Courses = () => {
     const courses = useLoaderData()
     console.log(courses)
     return (
-        <div className="sm:grid md:grid grid-cols-5 gap-4">
+        <div className="Courses sm:grid md:grid grid-cols-5 gap-4 lg:my-8">
             <div className="py-5 sticky ">
                 {
                     courses.map(course => <Link to={`/courses/${course.id}`} key={course.id}>
