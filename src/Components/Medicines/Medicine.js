@@ -4,10 +4,12 @@ const Medicine = ({ medicine }) => {
     const { name, picture, about, company } = medicine
     return (
         <div>
-            <div
+            <div data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
                 title={company}
                 aria-label="View Item"
-                className="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
+                className="inline-block overflow-hidden bg-white rounded shadow-sm hover:-translate-y-2"
             >
                 <div className="flex flex-col h-full border">
                     <img

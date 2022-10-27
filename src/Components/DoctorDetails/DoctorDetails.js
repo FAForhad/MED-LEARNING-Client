@@ -25,7 +25,8 @@ const DoctorDetails = () => {
                                 {about}
                             </p>
                         </div>
-                        <div className="grid gap-5 row-gap-8 sm:grid-cols-2">
+                        <div data-aos="zoom-in" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000" className="grid gap-5 row-gap-8 sm:grid-cols-2">
                             <div className="bg-white border-l-4 hover:transition hover:ease-in-out hover:duration-500 border-teal-400 shadow-xl hover:shadow-cyan-300/50">
                                 <div className="h-full p-5 border border-l-0 rounded-r">
                                     <h6 className="mb-2 font-semibold leading-5">
@@ -38,7 +39,9 @@ const DoctorDetails = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-white border-l-4 hover:transition hover:ease-in-out hover:duration-500 border-teal-400 shadow-xl hover:shadow-cyan-300/50">
+                            <div
+                                data-aos="zoom-in" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="1000" className="bg-white border-l-4 hover:transition hover:ease-in-out hover:duration-500 border-teal-400 shadow-xl hover:shadow-cyan-300/50">
                                 <div className="h-full p-5 border border-l-0 rounded-r">
                                     <h6 className="mb-2 font-semibold leading-5">
                                         {phone}
@@ -52,7 +55,7 @@ const DoctorDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div data-aos="zoom-in">
                         <img
                             className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
                             src={picture}

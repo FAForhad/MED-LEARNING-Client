@@ -6,7 +6,8 @@ import { GrBlog } from "react-icons/gr";
 export const Details = () => {
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-transparent">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div data-aos="fade-up" data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000" className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                     </p>
@@ -45,7 +46,8 @@ export const Details = () => {
                 </p>
             </div>
             <div className="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
+                <div data-aos="zoom-in-right" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='/courses'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <FaDiscourse></FaDiscourse>
@@ -57,7 +59,8 @@ export const Details = () => {
                         </p>
                     </Link>
                 </div>
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
+                <div data-aos="zoom-in" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='/instructors'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <FaChalkboardTeacher ></FaChalkboardTeacher>
@@ -69,7 +72,8 @@ export const Details = () => {
                         </p>
                     </Link>
                 </div>
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
+                <div data-aos="zoom-in" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='medicines'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <GiMedicines></GiMedicines>
@@ -81,7 +85,8 @@ export const Details = () => {
                         </p>
                     </Link>
                 </div>
-                <div className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
+                <div data-aos="zoom-in-left" data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000" className="flex flex-col justify-between p-5 border rounded shadow-sm hover:drop-shadow-2xl hover:shadow-xl hover:transition hover:ease-in-out hover:duration-300 hover:shadow-cyan-200/50">
                     <Link to='/blogs'>
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                             <GrBlog></GrBlog>

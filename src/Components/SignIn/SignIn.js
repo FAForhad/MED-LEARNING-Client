@@ -21,7 +21,7 @@ export const SignIn = () => {
             .then(result => {
                 const user = result.user
                 form.reset()
-                navigate(from, { replace: true })
+                navigate(from, { replace: true } || '/')
                 toast.success('Login Successful')
                 console.log(user)
             })
@@ -32,10 +32,12 @@ export const SignIn = () => {
 
 
     const handleGoogleLogin = () => {
+        const from = location?.state?.from?.pathname || '/'
         googleLogin()
             .then(result => {
                 const user = result.user
                 console.log(user)
+                navigate(from, { replace: true } || '/')
                 toast.success('Login Successful')
             })
             .catch(error => {
@@ -45,10 +47,12 @@ export const SignIn = () => {
 
 
     const handleGithubLogin = () => {
+        const from = location?.state?.from?.pathname || '/'
         githubLogin()
             .then(result => {
                 const user = result.user
                 console.log(user)
+                navigate(from, { replace: true } || '/')
                 toast.success('Login Successful')
             })
             .catch(error => setError(error.message))
@@ -68,7 +72,10 @@ export const SignIn = () => {
                     <div className="flex flex-col items-center justify-between xl:flex-row">
                         <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
                         </div>
-                        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-800 dark:text-gray-100">
+                        <div data-aos="fade-left"
+                            data-aos-anchor="#example-anchor"
+                            data-aos-offset="500"
+                            data-aos-duration="1000" className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-800 dark:text-gray-100">
                             <h1 className="text-2xl font-bold text-center">Sign In</h1>
                             <form onSubmit={handleLogin} className="space-y-6 ng-untouched ng-pristine ng-valid">
                                 <div className="space-y-1 text-sm">
@@ -78,9 +85,6 @@ export const SignIn = () => {
                                 <div className="space-y-1 text-sm">
                                     <label type="password" className="block dark:text-gray-400">Password</label>
                                     <input type="password" name="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-violet-400" required />
-                                    <div className="flex justify-end text-xs dark:text-gray-400">
-                                        <a rel="noopener noreferrer" href="#">Forgot Password?</a>
-                                    </div>
                                 </div>
                                 <p className="text-red-500">{error}</p>
                                 <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400 hover:bg-violet-800 hover:text-gray-200">Sign in</button>

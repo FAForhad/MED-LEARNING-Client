@@ -40,9 +40,11 @@ I have installed Tailwind css for styled the components and the design.
 
 #### Sign In 
 - You can sign with your email, pass or google and github
-- if you forgot your pass you can handle id
+- if you forgot your pass you can handle it
 
 #### Sign Up
 - You nees to upload your name, photo, email, password to sign up
+- To Verify your email address please check you mail or spam folder
+
 
 

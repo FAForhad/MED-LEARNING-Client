@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContexts';
 
 const SignUp = () => {
-    const { register, updateUser } = useContext(AuthContext)
-
+    const { register, updateUser, verifyEmail } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleSignIn = (event) => {
         event.preventDefault()
         const form = event.target
@@ -27,8 +27,23 @@ const SignUp = () => {
                 const user = result.user
                 form.reset()
                 handleupdateUser(name, picture)
+                verifyEmail()
+                    .then(() => {
+                        toast.success('Email verification sent!', {
+                            style: {
+                                border: '1px solid #713200',
+                                padding: '16px',
+                                color: '#713200',
+                            },
+                            iconTheme: {
+                                primary: '#713200',
+                                secondary: '#FFFAEE',
+                            },
+                        });
+                    })
                 toast.success('Sign Up Successful')
                 console.log(user)
+                navigate('/')
             })
             .catch(error => console.error(error))
     }
@@ -56,7 +71,10 @@ const SignUp = () => {
                     <div className="flex flex-col items-center justify-between xl:flex-row">
                         <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
                         </div>
-                        <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-800 dark:text-gray-100">
+                        <div data-aos="fade-left"
+                            data-aos-anchor="#example-anchor"
+                            data-aos-offset="500"
+                            data-aos-duration="1000" className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-800 dark:text-gray-100">
                             <h1 className="text-2xl font-bold text-center">Sign Up</h1>
                             <form onSubmit={handleSignIn} className="space-y-6 ng-untouched ng-pristine ng-valid">
                                 <div className="space-y-1 text-sm">
