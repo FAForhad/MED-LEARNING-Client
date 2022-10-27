@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import ToPdf from '../../Others/ToPDF/ToPdf';
 import SingleCourseDetails from './SingleCourseDetails';
 
 const CourseDetails = () => {
@@ -7,7 +8,8 @@ const CourseDetails = () => {
     const { courses, picture } = courseDetails
     return (
         <div>
-            <div className="bg-gray-100">
+            <ToPdf rootElementsId="pageDownload" downloadFileName='testPage' />
+            <div className="bg-gray-100" id='pageDownload'>
                 <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
                     <div rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group  focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-800 rounded">
                         <img src={picture} alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-12 dark:bg-gray-500" />

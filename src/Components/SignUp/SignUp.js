@@ -13,6 +13,15 @@ const SignUp = () => {
         const picture = form.picture.value
         const email = form.email.value
         const password = form.password.value
+        if (!/(?=.*[A-Z])/.test(password)) {
+            return toast.error('Password should contain at least a capital lette')
+        }
+        if (!/(?=.*[!@#\$%\^&\*])/.test(password)) {
+            return toast.error('Should contain at least a special character')
+        }
+        if (password.length < 8) {
+            return toast.error(' Password should be 8 letter or more')
+        }
         register(email, password)
             .then(result => {
                 const user = result.user

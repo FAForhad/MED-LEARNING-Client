@@ -14,6 +14,9 @@ export const SignIn = () => {
         const email = form.email.value
         const password = form.password.value
         const from = location?.state?.from?.pathname || '/'
+        if (!password.length > 8) {
+            return toast.error(' Password should be 8 letter or more')
+        }
         login(email, password)
             .then(result => {
                 const user = result.user

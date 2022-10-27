@@ -32,7 +32,7 @@ const Courses = () => {
                         </div>
                         <div>
                             <Link to='/pricing'>
-                                <button class="bg-cyan-400 rounded p-4 shadow-xl w-full text-lg font-semibold  shadow-cyan-400/50 ">
+                                <button className="bg-cyan-400 rounded p-4 shadow-xl w-full text-lg font-semibold  shadow-cyan-400/50 ">
                                     <span className='text-xl font-bold'>GET OUR ACCESS.</span>  BUY ONCE, USE FOREVER.
                                 </button>
                             </Link>

@@ -6,8 +6,9 @@ import { AuthContext } from '../../Contexts/UserContexts';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [toggle, setToggle] = useState(false)
     const { user, logOut } = useContext(AuthContext)
-
+    console.log(toggle)
 
     const handleSignOut = () => {
         logOut()
@@ -15,8 +16,8 @@ const Navbar = () => {
             .catch((error) => console.log(error));
     }
     return (
-        <div className='sticky top-0 z-50'>
-            <div className="px-4 py-4 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 ">
+        <div className={`${toggle ? 'bg-slate-700' : 'bg-transparent'} sticky top-0 z-50`}>
+            <div className="px-4 py-4 mx-auto lg:py-8  sm:max-w-xl md:max-w-full lg:max-w-full md:px-24 lg:px-8 ">
                 <div className="relative flex idtems-center justify-between lg:justify-center lg:space-x-16">
                     <ul className="flex items-center hidden space-x-8 lg:flex">
                         <li>
@@ -57,7 +58,7 @@ const Navbar = () => {
                         className="inline-flex items-center"
                     >
                         <GiMiracleMedecine size='40px' className='text-teal-500'></GiMiracleMedecine>
-                        <span className="ml-2 text-xl font-bold tracking-wide text-blue-500 uppercase">
+                        <span className={`  ml-2 text-xl font-bold tracking-wide  uppercase`}>
                             MED LEARNING
                         </span>
                     </Link>
@@ -115,6 +116,15 @@ const Navbar = () => {
                                     </li>
                                 </>
                         }
+                        <label type="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+                            <span className='text-black'>Light</span>
+                            <span className="relative">
+                                <input onClick={() => setToggle(!toggle)} id="Toggle1" type="checkbox" className="hidden peer" />
+                                <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-100 peer-checked:dark:bg-gray-900"></div>
+                                <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-blue-800"></div>
+                            </span>
+                            <span className='text-black'>Dark</span>
+                        </label>
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -247,6 +257,15 @@ const Navbar = () => {
                                                     Sign up
                                                 </Link>
                                             </li>
+                                            <label type="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+                                                <span className='text-black'>Light</span>
+                                                <span className="relative">
+                                                    <input onClick={() => setToggle(!toggle)} id="Toggle1" type="checkbox" className="hidden peer" />
+                                                    <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-100 peer-checked:dark:bg-gray-900"></div>
+                                                    <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-blue-800"></div>
+                                                </span>
+                                                <span className='text-black'>Dark</span>
+                                            </label>
                                         </ul>
                                     </nav>
                                 </div>
