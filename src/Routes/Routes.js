@@ -63,7 +63,7 @@ const Routes = () => {
                 },
                 {
                     path: '/pricing',
-                    element: <Pricing></Pricing>
+                    element: <PrivateRoute><Pricing></Pricing></PrivateRoute>
                 }
 
 

@@ -53,8 +53,8 @@ const Navbar = () => {
                     </ul>
                     <Link
                         to="/"
-                        aria-label="Company"
-                        title="Company"
+                        aria-label="MED LearninG"
+                        title="MED LearninG"
                         className="inline-flex items-center"
                     >
                         <GiMiracleMedecine size='40px' className='text-teal-500'></GiMiracleMedecine>
@@ -155,8 +155,8 @@ const Navbar = () => {
                                         <div>
                                             <Link
                                                 to="/"
-                                                aria-label="Company"
-                                                title="Company"
+                                                aria-label="MED LearninG"
+                                                title="MED LearninG"
                                                 className="inline-flex items-center"
                                             >
                                                 <svg
@@ -199,7 +199,7 @@ const Navbar = () => {
                                         <ul className="space-y-4">
                                             <li>
                                                 <Link
-                                                    to="/trajectory"
+                                                    to="/courses"
                                                     aria-label="Our product"
                                                     title="Our product"
                                                     className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -220,8 +220,8 @@ const Navbar = () => {
                                             <li>
                                                 <Link
                                                     to="/medicines"
-                                                    aria-label="Product pricing"
-                                                    title="Product pricing"
+                                                    aria-label="Medicines"
+                                                    title="Medicines"
                                                     className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Medicines
@@ -230,8 +230,8 @@ const Navbar = () => {
                                             <li>
                                                 <Link
                                                     to="blogs"
-                                                    aria-label="About us"
-                                                    title="About us"
+                                                    aria-label=" Blogs"
+                                                    title=" Blogs"
                                                     className="font-medium tracking-wide text-black hover:text-teal-300 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
                                                     Blogs

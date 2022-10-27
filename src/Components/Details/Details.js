@@ -41,8 +41,7 @@ export const Details = () => {
 
                 </h2>
                 <p className="text-base text-gray-700 md:text-lg">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque rem aperiam, eaque ipsa quae.
+                    Develops, produces, and markets drugs or pharmaceutical drugs for use as medications to be administered to patients
                 </p>
             </div>
             <div className="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
